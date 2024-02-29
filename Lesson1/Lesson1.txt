@@ -1,0 +1,40 @@
+
+  Systemy czasu rzeczywistego:
+
+Hard i Soft
+
+Hard -> potrzeba szybkiej reakcji
+Soft -> mała potrzeba szybkiej reakcji
+
+  Systemy wbudowane:
+
+Lodowki, pralki, samoloty, samochody, technologie kosmiczne
+Nie komputer i nie telefon dlatego ze one sa same w sobie komputerem
+
+Pierwszy system wudowany to system Apollo, sam reagowal na wydarzajace sie sytuacje
+
+Def.  Jest to system komputerowy, zaprojektowany aby dzialal autonomicznie
+      Jest to hardware lub software, jest oparty o mikrokontrolery lub mikroprocesory
+
+
+PE -> Processing elements (jednostki obliczeniowe) -> wykonywanie zadan
+
+CL -> Communication links -> magistrale komunikacyjne
+
+
+PP -> Programable processor (programowalnie jednostki obliczeniowe) -> uniwersalne jednoski obliczeniowe ktróre wykonują obliczenia
+HC -> Hardware cores (jednostki sprzętowe) (moduły dedukowane) -> Jednostki sprecyzowane do wykonywania jednej określonej czynności
+
+
+Wartosci systemow wbudowanych:
+    -> Pobór mocy
+    -> Wielkość
+    -> Koszt (koszt architektury, koszt wykonania zadań)
+    -> Czas wykonania jednego zadania i wszystkich zadań
+
+
+Task 1: Narysuj: 3xCL i 10xPE (6xPP, 4xHC), 
+                Połączenia: 
+                  6xPP i 3xHC => CL1,
+                  4xPP i 2xHC => CL2,
+                  2xPP i 4xHC => CL3
