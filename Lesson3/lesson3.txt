@@ -1,0 +1,11 @@
+
+Sposób zapisu systemu wbudowanego:
+  - graf zadań
+  - ...
+
+
+  Graf zadań:
+    - w węzłach są zadania
+    - widać które zadania muszą się wykonać pierwsze
+
+Magistrala ma przepustowość b (ilość jednostek danych możliwych do przesłania w jednej jednostce czasu)

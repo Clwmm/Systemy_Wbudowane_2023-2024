@@ -1,0 +1,8 @@
+Program symulujący działanie bramek logicznych: NOT, AND, OR, nand, exor oraz nor
+
+Kod źródłowy -> main.cpp
+Skompilowany program pod windows x64: Program.exe
+
+Program nie potrzebuje żadnych dodatkowych bibliotek
+
+Stworzone przy pomocy Visual Studio 2022 Community

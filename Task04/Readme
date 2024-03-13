@@ -1,0 +1,13 @@
+Program generujący graf zadań i zapisujący wynik do pliku.
+Na wejściu użytkownik podaje: liczbę zadań w grafie, liczbę
+uniwersalnych zasobów obliczeniowych (PPs), liczbę
+specjalizowanych zasobów obliczeniowych (HCs), liczbę kanałów
+komunikacyjnych (CLs), informację o tym czy krawędzie w grafie
+są niezerowe (oraz ewentualnie nazwę pliku wyjściowego).
+
+Kod źródłowy -> main.cpp, Graph.h
+Skompilowany program pod windows x64: Embeded_Graph_Generator.exe
+
+Program nie potrzebuje żadnych dodatkowych bibliotek
+
+Stworzone przy pomocy Visual Studio 2022 Community

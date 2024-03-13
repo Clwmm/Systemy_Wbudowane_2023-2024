@@ -1,0 +1,24 @@
+
+Standard rysowania bramek logicznych: IEEE
+
+Zmienna: Pobór mocy, wielkość, koszt, czas wykonania jednego zadania
+
+Optymalizacja w sensie pareto:
+  -> optymalizując jedną zmienną pogarszamy drugą
+
+Optymalizacja:
+  -> ustawiamy wartość graniczną(krytyczną) danej zmiennej
+  -> hard time constrains:
+
+
+GANT CHART -> zdj1.jpeg
+
+Czas wykonywania systemy wbudowanego to czas w którym ostatnie zadanie kończy się
+
+
+
+Fazy projektowania systemód wudowanych:
+  -> 1. Modelowanie
+  -> 2. Implementacji: fizyczna implementacja systemu
+  -> 3. Walidacja: Sprawdzenie czy wszystko działa poprawnie
+  -> 4. Przydział nieprzewidzanych zadań
