@@ -1,0 +1,8 @@
+Dla grafu z pliku graph 20 proszę znaleźć system, który będzie wykonywał wszystkie zadania w najszybszym możliwym czasie. Proszę obliczyć ten czas.
+
+Kod źródłowy -> main.cpp
+Skompilowany program pod windows x64: Embeded_Task_5.exe
+
+Program nie potrzebuje żadnych dodatkowych bibliotek
+
+Stworzone przy pomocy Visual Studio 2022 Community
