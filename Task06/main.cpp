@@ -5,6 +5,7 @@
 #include <sstream>
 #include <limits>
 #include <map>
+#include <unordered_map>
 #include <set>
 
 int time_criteria(const int& task_id, const std::vector<std::vector<int>>& times)
@@ -152,6 +153,26 @@ int normalization_criteria(const int& task_id, const std::vector<std::vector<int
 	return proc_id;
 }
 
+int least_used(std::map<int, int> selected_proc)
+{
+	std::unordered_map<int, int> frequencyMap;
+
+	for (const auto& pair : selected_proc) {
+		frequencyMap[pair.second]++;
+	}
+
+	int minFrequency = INT_MAX;
+	int leastFrequentSecond = 0;
+	for (const auto& pair : frequencyMap) {
+		if (pair.second < minFrequency) {
+			minFrequency = pair.second;
+			leastFrequentSecond = pair.first;
+		}
+	}
+
+	return leastFrequentSecond;
+}
+
 int main(int argc, char* argv[])
 {
 	if (argc != 2)
@@ -239,7 +260,6 @@ int main(int argc, char* argv[])
 	std::getline(inputFile, line);
 	std::string no_comm_str = line.substr(6, line.size() - 6);
 	int no_comm = std::stoi(no_comm_str);
-
 	std::vector<std::string> comm;
 	for (size_t i = 0; i < no_comm; i++)
 	{
@@ -291,6 +311,8 @@ int main(int argc, char* argv[])
 		int time_allocated_c = time_criteria_on_allocated(task_id, times, used_proc); // 25
 		int cost_c = cost_citeria(task_id, cost); // 25
 		int cost_allocated_c = cost_criteria_on_allocated(task_id, cost, used_proc); // 25 
+		int most_used_c = least_used(selected_proc); // 50
+
 
 		criteria[norm_c] += 200;
 		criteria[time_cost_c] += 100;
@@ -298,11 +320,13 @@ int main(int argc, char* argv[])
 		criteria[time_allocated_c] += 25;
 		criteria[cost_c] += 25;
 		criteria[cost_allocated_c] += 25;
+		criteria[most_used_c] += 50;
+		if (task_id) criteria[selected_proc[task_id - 1]] += 50;
 
 		int max = INT_MIN;
 		int actual_selected_proc = 0;
 		for (auto x : criteria)
-		{
+		{  
 			if (x.second > max)
 			{
 				max = x.second;
@@ -314,8 +338,23 @@ int main(int argc, char* argv[])
 		used_proc.insert(actual_selected_proc);
 	}
 
+
+	std::map<int, std::vector<int>> task_assigned;
+
 	for (auto x : selected_proc)
-		std::cout << x.first << "\t->\t" << x.second << std::endl;
+		task_assigned[x.second].push_back(x.first);
+
+	for (auto x : task_assigned)
+	{
+		std::cout << "P" << x.first + 1 << " :\t";
+		for (size_t i = 0; i < x.second.size(); i++)
+		{
+			if (i == x.second.size()-1)
+				std::cout << "T" << x.second[i] << std::endl;
+			else
+				std::cout << "T" << x.second[i] << ", ";
+		}
+	}
 
 	system("pause");
 }

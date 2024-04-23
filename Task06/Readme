@@ -1,0 +1,11 @@
+Algorytm konstrukcyjny do kosyntezy systemów wbudowanych opracowany na zajęciach.
+
+Kod źródłowy -> main.cpp
+Skompilowany program pod windows x64: Embeded_Task_5.exe
+
+Otwieranie:
+    - przeciągnięcię pliku graph.dat.txt na plik exe
+
+Program nie potrzebuje żadnych dodatkowych bibliotek
+
+Stworzone przy pomocy Visual Studio 2022 Community
