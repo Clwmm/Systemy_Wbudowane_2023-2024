@@ -1,0 +1,11 @@
+Implementacja zachłannego algorytmu rafinacyjnego z zajęć 3.04.2024
+
+Kod źródłowy -> main.cpp, Graph.h
+Skompilowany program pod windows x64: Embeded_Task_7.exe
+
+Otwieranie:
+    - przeciągnięcię pliku graph.dat.txt na plik exe
+
+Program nie potrzebuje żadnych dodatkowych bibliotek
+
+Stworzone przy pomocy Visual Studio 2022 Community
