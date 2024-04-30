@@ -187,6 +187,14 @@ private:
 			getSlowestTask_(x.first, result);
 	}
 
+	bool haveSuccesor(node_ptr node)
+	{
+		for (auto x : node->successors)
+			if (node->time_end == x.first->time_start)
+				return true;
+		return false;
+	}
+
 	void getFastestTask_(node_ptr node, node_ptr& result)
 	{
 		if (result == nullptr)
@@ -195,8 +203,9 @@ private:
 				result = node;
 		}
 		else
-			if (node->successors.size() == 0 && node->time_end < result->time_end)
-				result = node;
+			if (node->successors.size() == 0 || !haveSuccesor(node))
+				if (node->time_end < result->time_end)
+					result = node;
 
 		for (auto x : node->successors)
 			getFastestTask_(x.first, result);
